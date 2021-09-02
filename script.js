@@ -43,7 +43,6 @@ function appendForcast(data) {
     
     for (day = 0; day < 5; day++) {
         let date = moment.unix(data.daily[day].dt).format("MM/DD/YYYY");
-        //let iconId = data.weather[0].icon;
         let temp = data.daily[day].temp.day;
         let wind = data.daily[day].wind_speed;
         let humid = data.daily[day].humidity;
@@ -52,10 +51,8 @@ function appendForcast(data) {
         let tempEl = document.createElement("p");
         let windEl = document.createElement("p");
         let humidEl = document.createElement("p");
-        let iconEl = document.createElement("img");
         //insert data
         titleEl.innerHTML = date;
-        iconEl.innerHTML = "icon";
         tempEl.innerHTML = "Temp: " + temp;
         windEl.innerHTML = "Wind: " + wind;
         humidEl.innerHTML = "Humid: " + humid;
