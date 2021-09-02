@@ -1,0 +1,39 @@
+ul {
+    list-style-type: none;
+}
+h4{
+    font-weight: bold;
+}
+header{
+    background-color: blue;
+    text-align:  center;
+}
+.searchbar{
+    width: 20%;
+}
+input,button{
+    margin: 5px;
+    border-radius: 4px;
+}
+.display{
+    width: 80%;
+}
+.currentCity{
+    border-radius: 5px;
+    border: 2px solid gray;
+}
+.forcast div{
+    width: 100%;
+    margin: 5px;
+    padding: 3px;
+    background-color: rgb(46, 46, 139);
+    color: white;
+    justify-content: space-between;
+}
+h1{
+    color: white;
+   
+}
+.forcast div{
+    
+}
