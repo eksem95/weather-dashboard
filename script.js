@@ -145,7 +145,7 @@ savedCities.addEventListener("click", function (event) {
     localStorage.setItem("lastSearched", lastSearched);
 });
 //append saved cities
-if (localStorage.getItem("lastSearched") === "null"){
+if (localStorage.getItem("lastSearched") !== null){
     getForcastData(localStorage.getItem("lastSearched"));
     getCurrentWeather(localStorage.getItem("lastSearched"));
 }
