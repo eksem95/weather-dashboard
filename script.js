@@ -111,7 +111,7 @@ function appendCities(){
     console.log(arrayOfValues, arrayOfKeys);
     let cityEl;
     for (i=0; i<arrayOfValues.length; i++){
-        if(arrayOfKeys[i] == "last searched"){
+        if(arrayOfKeys[i] === "lastSearched"){
             return
         }
         else {
@@ -129,9 +129,12 @@ searchBtn.addEventListener("click", function () {
     getCurrentWeather(cityName.value);
     getForcastData(cityName.value);
     lastSearched = cityName.value;
-    localStorage.setItem("last searched", lastSearched);
+    localStorage.setItem("lastSearched", lastSearched);
     saveCity(cityName.value);
-    appendCities()
+    //appendCities()
+    cityEl = document.createElement("button");
+    cityEl.textContent = cityName.value;
+    savedCities.append(cityEl);
 });
 //event listener for saved cities
 savedCities.addEventListener("click", function (event) {
@@ -139,9 +142,9 @@ savedCities.addEventListener("click", function (event) {
     getCurrentWeather(event.target.textContent);
     getForcastData(event.target.textContent);
     lastSearched = event.target.textContent;
-    localStorage.setItem("last searched", lastSearched);
+    localStorage.setItem("lastSearched", lastSearched);
 });
 //append saved cities
-getForcastData(localStorage.getItem("last searched"));
-getCurrentWeather(localStorage.getItem("last searched"));
+getForcastData(localStorage.getItem("lastSearched"));
+getCurrentWeather(localStorage.getItem("lastSearched"));
 appendCities();
