@@ -94,7 +94,7 @@ function getCoordinates(data) {
 }
 
 function getForcastData(city) {
-    let getWeatherapi = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=9e1bc7bce1d4ccfb02896abb14828f80`;
+    let getWeatherapi = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=9e1bc7bce1d4ccfb02896abb14828f80`;
 
     fetch(getWeatherapi)
         .then(response => {
